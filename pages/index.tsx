@@ -22,7 +22,7 @@ const Home = () => (
         width: 100%;
         padding-top: 80px;
         line-height: 1.15;
-        font-size: 48px;
+        font-size: 52px;
       }
       .title {
         text-align: center;
