@@ -1,5 +1,5 @@
-import Content from '../components/content';
-import TitleText from '../components/title-text';
+import Content from '../components/Content';
+import TitleText from '../components/TitleText';
 
 const Home = () => (
   <Content>
