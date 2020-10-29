@@ -1,7 +1,5 @@
-import React from 'react';
-
-import Content from '../components/Content';
-import TitleText from '../components/TitleText';
+import Content from '../components/content';
+import TitleText from '../components/title-text';
 
 const Home = () => (
   <Content>

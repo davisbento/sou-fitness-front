@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../styles/global';
