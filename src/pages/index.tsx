@@ -1,10 +1,9 @@
-import Content from '../components/Content';
-import TitleText from '../components/TitleText';
+import Title from '../components/Title';
 
 const Home = () => (
-  <Content>
-    <TitleText value='Bem-vindo ao SOU FITNESS' />
-  </Content>
+  <div>
+    <Title>Bem vindo ao Sou Fitness</Title>
+  </div>
 );
 
 export default Home;
