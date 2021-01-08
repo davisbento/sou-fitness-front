@@ -2,7 +2,7 @@ import Title from '../components/Title';
 
 const Home = () => (
   <div>
-    <Title>Bem vindo ao Sou Fitness</Title>
+    <Title center>Bem vindo ao Sou Fitness</Title>
   </div>
 );
 

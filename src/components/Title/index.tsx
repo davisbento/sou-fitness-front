@@ -3,11 +3,12 @@ import { ReactNode } from 'react';
 
 interface IProps {
   children: ReactNode;
+  center?: boolean;
 }
 
-const Title = ({ children }: IProps) => (
+const Title = ({ children, center }: IProps) => (
   <div>
-    <Typography variant='h1' color='primary'>
+    <Typography variant='h1' align={center ? 'center' : 'left'} color='primary'>
       {children}
     </Typography>
   </div>
