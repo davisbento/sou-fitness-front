@@ -4,7 +4,7 @@ import ButtonDefault from '../components/button';
 import SubTitle from '../components/typography/subtitle';
 import Title from '../components/typography/title';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
     height: '100vh',
@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: theme.spacing(5)
+    padding: '80px 10px'
   },
   content: {},
   buttonContainer: {}
