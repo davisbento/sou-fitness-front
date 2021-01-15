@@ -4,7 +4,8 @@ import { Overrides } from '@material-ui/core/styles/overrides';
 
 export const colors = {
   error: red.A400,
-  primaryLight: '#fff'
+  primaryLight: '#fff',
+  buttonDefault: '#5850ec'
 };
 
 export const propsOverride = {
@@ -20,33 +21,37 @@ export const propsOverride = {
 };
 
 export const themeOverride: Overrides = {
+  MuiGrid: {
+    container: {
+      height: '100%'
+    }
+  },
   MuiTypography: {
     h1: {
       fontSize: '4rem'
     }
   },
   MuiButton: {
-    contained: {
-      boxShadow: 'none'
+    text: {
+      padding: 12
+    }
+  },
+  MuiFormControl: {
+    root: {
+      marginBottom: 16
+    }
+  },
+  MuiFormLabel: {
+    root: {
+      color: '#000',
+      fontWeight: 500,
+      fontSize: 19
     }
   },
   MuiInput: {
     root: {
-      'padding': 0,
-      ['label + &' as any]: {
-        marginTop: '0.5rem'
-      },
-      ['& div + input' as any]: {
-        borderRadius: 4
-      },
       '&$error': {
         borderColor: colors.error
-      }
-    },
-    formControl: {
-      padding: 0,
-      ['label + &' as any]: {
-        marginTop: '0.5rem'
       }
     },
     input: {
@@ -54,57 +59,11 @@ export const themeOverride: Overrides = {
       'backgroundColor': 'white',
       'border': '1px solid #ced4da',
       'fontSize': 16,
-      'padding': '9px 16px 8px 8px',
+      'padding': 12,
       'width': 'calc(100% - 24px)',
       'transition': 'border-color, box-shadow, 0.3s',
       '&:focus': {
-        borderColor: colors.primaryLight,
-        zIndex: 10
-      }
-    },
-    inputMultiline: {
-      padding: 16,
-      boxSizing: 'border-box',
-      width: '100%',
-      minHeight: 80
-    },
-    multiline: {
-      padding: 0,
-      minHeight: 80
-    }
-  },
-  MuiFilledInput: {
-    root: {
-      'backgroundColor': '#f3f3f3',
-      'padding': 0,
-      ['label + &' as any]: {
-        marginTop: '0.5rem'
-      },
-      ['& div + input' as any]: {
-        borderRadius: '0 4px 4px 0'
-      },
-      '&$error': {
-        borderColor: colors.error
-      }
-    },
-    formControl: {
-      padding: 0,
-      ['label + &' as any]: {
-        marginTop: '0.5rem'
-      }
-    },
-    input: {
-      'borderRadius': 4,
-      'backgroundColor': '#f3f3f3',
-      'border': '1px solid #ced4da',
-      'fontSize': 16,
-      'padding': '9px 16px 8px 8px',
-      'width': 'calc(100% - 24px)',
-      'transition': 'border-color, box-shadow, 0.3s',
-      '&:focus': {
-        borderColor: colors.primaryLight,
-        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-        zIndex: 10
+        borderColor: colors.buttonDefault
       }
     },
     inputMultiline: {
@@ -119,6 +78,7 @@ export const themeOverride: Overrides = {
     }
   }
 };
+
 export const darkTheme = createMuiTheme({
   palette: {
     primary: {
@@ -134,6 +94,7 @@ export const darkTheme = createMuiTheme({
       default: '#000'
     }
   },
+  spacing: 16,
   props: propsOverride,
   overrides: themeOverride
 });
@@ -152,5 +113,8 @@ export const lightTheme = createMuiTheme({
     background: {
       default: '#fff'
     }
-  }
+  },
+  spacing: 16,
+  props: propsOverride,
+  overrides: themeOverride
 });
