@@ -28,12 +28,22 @@ export const themeOverride: Overrides = {
   },
   MuiTypography: {
     h1: {
-      fontSize: '4rem'
+      fontSize: 62
+    },
+    body1: {
+      fontSize: 21
     }
   },
   MuiButton: {
-    text: {
-      padding: 12
+    containedPrimary: {
+      'backgroundColor': colors.buttonDefault,
+      'color': colors.primaryLight,
+      '&:hover': {
+        backgroundColor: '#007db3'
+      }
+    },
+    root: {
+      padding: 16
     }
   },
   MuiFormControl: {

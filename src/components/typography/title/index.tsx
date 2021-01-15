@@ -7,11 +7,9 @@ interface IProps {
 }
 
 const Title = ({ children, center }: IProps) => (
-  <div>
-    <Typography variant='h1' align={center ? 'center' : 'left'} color='primary'>
-      {children}
-    </Typography>
-  </div>
+  <Typography variant='h1' align={center ? 'center' : 'left'} color='primary'>
+    {children}
+  </Typography>
 );
 
 export default Title;
