@@ -1,6 +1,6 @@
 import { Grid, makeStyles } from '@material-ui/core';
 import { Formik } from 'formik';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 import FormBase from '../form/form-base';
 import FormButton from '../form/form-button';
@@ -12,7 +12,7 @@ interface IProps {}
 
 const useStyles = makeStyles(theme => ({
   form: {
-    padding: theme.spacing(2)
+    marginTop: theme.spacing(2)
   }
 }));
 
@@ -29,7 +29,7 @@ export default function SearchPersonal({}: IProps) {
   ]);
 
   return (
-    <div id='search-personal'>
+    <Fragment>
       <Title center>Encontre seu personal</Title>
       <SubTitle center>Pesquise por modalidade e/ou localização</SubTitle>
 
@@ -62,6 +62,6 @@ export default function SearchPersonal({}: IProps) {
           )}
         </Formik>
       </div>
-    </div>
+    </Fragment>
   );
 }

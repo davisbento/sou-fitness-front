@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import { useCallback, useRef } from 'react';
 
 import ButtonDefault from '../components/button';
 import SearchPersonal from '../components/search-personal';
@@ -30,6 +31,10 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
   const classes = useStyles();
 
+  const personalRef = useRef(null);
+
+  const goToPersonal = useCallback(() => personalRef.current.scrollIntoView(), []);
+
   return (
     <div>
       <div className={classes.root}>
@@ -39,12 +44,12 @@ const Home = () => {
             <SubTitle center>Aqui você encontra os melhores personal trainers do mercado</SubTitle>
           </div>
           <div>
-            <ButtonDefault text='Encontre seu personal agora mesmo' />
+            <ButtonDefault onClick={goToPersonal} text='Encontre seu personal agora mesmo' />
           </div>
         </div>
       </div>
 
-      <div className={classes.filterContainer}>
+      <div className={classes.filterContainer} ref={personalRef}>
         <SearchPersonal />
       </div>
     </div>
