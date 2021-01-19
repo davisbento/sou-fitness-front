@@ -6,13 +6,8 @@ interface IProps {
   children: ReactNode;
 }
 
-const useStyles = makeStyles(theme => ({
-  form: {
-    marginTop: theme.spacing(2),
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column'
-  }
+const useStyles = makeStyles(() => ({
+  form: {}
 }));
 
 export default function FormBase({ children }: IProps) {

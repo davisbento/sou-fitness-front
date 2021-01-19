@@ -47,15 +47,20 @@ export const themeOverride: Overrides = {
     }
   },
   MuiFormControl: {
-    root: {
-      marginBottom: 16
-    }
+    root: {}
   },
   MuiFormLabel: {
     root: {
-      color: '#000',
+      color: '#fff',
       fontWeight: 500,
       fontSize: 19
+    }
+  },
+  MuiSelect: {
+    select: {
+      '&:focus': {
+        backgroundColor: colors.primaryLight
+      }
     }
   },
   MuiInput: {
@@ -66,7 +71,7 @@ export const themeOverride: Overrides = {
     },
     input: {
       'borderRadius': 4,
-      'backgroundColor': 'white',
+      'backgroundColor': '#fff',
       'border': '1px solid #ced4da',
       'fontSize': 16,
       'padding': 12,

@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const ButtonDefault = ({ text }: IProps) => (
-  <Button variant='contained' color='primary'>
+  <Button variant='contained' color='primary' href='#search-personal'>
     {text}
   </Button>
 );

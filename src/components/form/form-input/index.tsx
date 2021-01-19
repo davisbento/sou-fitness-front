@@ -1,3 +1,4 @@
+import FormHelperText from '@material-ui/core/FormHelperText';
 import TextField from '@material-ui/core/TextField';
 import { useField } from 'formik';
 import { Fragment } from 'react';
@@ -12,8 +13,8 @@ export default function FormInput({ label, name }: IProps) {
 
   return (
     <Fragment>
-      <TextField error={meta.error && meta.touched} {...field} label={label} />
-      {meta.error && meta.touched && <div>{meta.error}</div>}
+      <TextField fullWidth error={meta.error && meta.touched} {...field} label={label} />
+      {meta.error && meta.touched && <FormHelperText>{meta.error}</FormHelperText>}
     </Fragment>
   );
 }
