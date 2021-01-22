@@ -1,8 +1,7 @@
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
-
-import { colors } from '../theme';
+import { colors } from 'theme';
 
 export default class MyDocument extends Document {
   render() {

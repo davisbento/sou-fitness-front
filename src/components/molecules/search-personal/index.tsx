@@ -1,16 +1,18 @@
 import { Grid, makeStyles } from '@material-ui/core';
+import FormBase from 'components/atoms/form/form-base';
+import FormButton from 'components/atoms/form/form-button';
+import FormSelect, { IOptions } from 'components/atoms/form/form-select';
+import SubTitle from 'components/atoms/typography/subtitle';
+import Title from 'components/atoms/typography/title';
 import { Formik } from 'formik';
-import { Fragment, useState } from 'react';
-
-import FormBase from '../form/form-base';
-import FormButton from '../form/form-button';
-import FormSelect, { IOptions } from '../form/form-select';
-import SubTitle from '../typography/subtitle';
-import Title from '../typography/title';
+import { useState } from 'react';
 
 interface IProps {}
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(2)
+  },
   form: {
     marginTop: theme.spacing(2)
   }
@@ -29,8 +31,10 @@ export default function SearchPersonal({}: IProps) {
   ]);
 
   return (
-    <Fragment>
-      <Title center>Encontre seu personal</Title>
+    <div className={classes.root}>
+      <Title variant='h3' center>
+        Encontre seu personal
+      </Title>
       <SubTitle center>Pesquise por modalidade e/ou localização</SubTitle>
 
       <div className={classes.form}>
@@ -62,6 +66,6 @@ export default function SearchPersonal({}: IProps) {
           )}
         </Formik>
       </div>
-    </Fragment>
+    </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
-
-import { darkTheme, lightTheme } from '../theme';
+import { darkTheme, lightTheme } from 'theme';
 
 enum ETheme {
   dark = 'dark',

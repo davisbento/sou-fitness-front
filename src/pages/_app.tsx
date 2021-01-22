@@ -1,11 +1,10 @@
-import '../assets/styles/global.css';
+import 'assets/styles/global.css';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
 import React from 'react';
-
-import { darkTheme } from '../theme';
+import { darkTheme } from 'theme';
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;

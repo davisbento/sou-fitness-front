@@ -1,10 +1,11 @@
 import { makeStyles } from '@material-ui/core';
+import ButtonDefault from 'components/atoms/button';
+import SubTitle from 'components/atoms/typography/subtitle';
+import Title from 'components/atoms/typography/title';
+import Footer from 'components/molecules/footer';
+import SearchPersonal from 'components/molecules/search-personal';
+import SignupPersonal from 'components/molecules/signup-personal';
 import { useCallback, useRef } from 'react';
-
-import ButtonDefault from '../components/button';
-import SearchPersonal from '../components/search-personal';
-import SubTitle from '../components/typography/subtitle';
-import Title from '../components/typography/title';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   },
-  container: {
+  mainContainer: {
     height: '100%',
     display: 'flex',
     justifyContent: 'space-between',
@@ -23,24 +24,27 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: '80px 10px'
   },
-  filterContainer: {
-    padding: theme.spacing(2)
+  spacing: {
+    marginTop: theme.spacing(4)
   }
 }));
 
-const Home = () => {
+export default function Home() {
   const classes = useStyles();
 
-  const personalRef = useRef(null);
+  const personalRef = useRef<HTMLDivElement>(null);
 
   const goToPersonal = useCallback(() => personalRef.current.scrollIntoView(), []);
 
   return (
     <div>
       <div className={classes.root}>
-        <div className={classes.container}>
+        <div className={classes.mainContainer}>
+          <div />
           <div>
-            <Title center>Bem vindo ao Sou Fitness</Title>
+            <Title variant='h1' center>
+              Bem vindo ao Sou Fitness
+            </Title>
             <SubTitle center>Aqui você encontra os melhores personal trainers do mercado</SubTitle>
           </div>
           <div>
@@ -49,10 +53,17 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={classes.filterContainer} ref={personalRef}>
+      <div className={classes.spacing} ref={personalRef}>
         <SearchPersonal />
+      </div>
+
+      <div className={classes.spacing}>
+        <SignupPersonal />
+      </div>
+
+      <div className={classes.spacing}>
+        <Footer />
       </div>
     </div>
   );
-};
-export default Home;
+}

@@ -30,8 +30,11 @@ export const themeOverride: Overrides = {
     h1: {
       fontSize: 62
     },
+    h3: {
+      fontSize: 26
+    },
     body1: {
-      fontSize: 21
+      fontSize: 20
     }
   },
   MuiButton: {
